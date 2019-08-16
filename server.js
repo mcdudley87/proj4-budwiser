@@ -37,7 +37,7 @@ db.on('error', (err) => {
 // app.use('/auth.signup', signupLimiter);
 
 app.use('/auth', require('./routes/auth'));
-app.use('/api', expressJWT({secret: process.env.JWT_SECRET}), require('./routes/api'));
+app.use('/api', expressJWT({secret: process.env.JWT_SECRET}), require('./routes/database'));
 // //       ^^where it's from       ^^where it goes
 
 app.listen(process.env.PORT, () => {
