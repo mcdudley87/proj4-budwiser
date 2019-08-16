@@ -20,7 +20,9 @@ const userSchema = new mongoose.Schema({
 		required: [true, 'Enter an Email Address'],
 		minlength: [5, 'Email must be between 5 and 99 characters'],
 		maxlength: [99, 'Email must be between 5 and 99 characters']
-	}
+	},
+	budbooks: [{type: mongoose.Schema.Types.ObjectId, ref: 'Budbook'}],
+	comments: [{type: mongoose.Schema.Types.ObjectId, ref: 'Comment'}]
 });
 
 //Mongoose equivalent of 'toJSON'
