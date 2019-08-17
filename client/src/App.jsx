@@ -2,6 +2,14 @@ import React from 'react';
 import axios from 'axios';
 import Login from './Login';
 import Signup from './Signup';
+import Budbook from './components/Budbook';
+import Home from './components/Home';
+
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom';
 
 class App extends React.Component {
   constructor(props) {
@@ -78,8 +86,9 @@ class App extends React.Component {
       contents = (
         <>
         <p>Hello, {user.name}</p>
-        <p onClick={this.logout}>Logout</p>
-        <p> PUT A NAV BAR HERE AND A PICTURE OF A JUICY JUICY BUD</p>
+        <button>
+          <p onClick={this.logout}>Logout</p>
+        </button>
         </>
       );
     } else {
@@ -92,7 +101,24 @@ class App extends React.Component {
       );
     }
     return (
-      contents
+      <>
+        <div>
+          {contents}
+        </div>
+
+        <Router>
+          <nav>
+            <Link to="/">Home</Link> {' '}
+            <Link to="/Budbook"> Budbooks </Link>
+          </nav>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/Budbook" 
+                component={Budbook}    
+                render={Budbook}  
+          />
+          
+        </Router>
+      </>
     );
   }
 }
