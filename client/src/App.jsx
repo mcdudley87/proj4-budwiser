@@ -79,6 +79,7 @@ class App extends React.Component {
         <>
         <p>Hello, {user.name}</p>
         <p onClick={this.logout}>Logout</p>
+        <p> PUT A NAV BAR HERE AND A PICTURE OF A JUICY JUICY BUD</p>
         </>
       );
     } else {
