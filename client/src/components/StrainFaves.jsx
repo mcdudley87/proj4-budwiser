@@ -3,7 +3,7 @@ import React from 'react';
 function StrainFaves ({strainFavorites, handleStrainSelect}) {
 	let content;
 	if (strainFavorites.length) {
-		content = strainFavorites.map((strains, id) => {
+		content = strainFavorites.map((strain, id) => {
 			return <p onClick={() => handleStrainSelect(strain.name)} key={id}>{strain.name}</p>
 		})
 	} else {

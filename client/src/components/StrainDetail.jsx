@@ -7,7 +7,7 @@ function StrainDetail({strain, setStrainFavorites}) {
 		<>
 			<h1>YOU WANNA GET HIGH?</h1>
 			<h3>{strain.name}</h3>
-
+			<button onClick={saveFave}>Save Strain</button>
 		</>
 	)
 	
@@ -27,7 +27,5 @@ function StrainDetail({strain, setStrainFavorites}) {
 		</div>
 	)
 }
-
-
 
 export default StrainDetail;
