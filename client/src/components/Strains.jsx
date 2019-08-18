@@ -9,12 +9,13 @@ function Strains() {
 	const [strainFavorites, setStrainFavorites] = useState([])
 	const [strain, setStrain] = useState({})
 	const [strainName, setStrainName] = useState('')
+	// strainapi.evanbusse.com/AJg5spQ/strains/data/desc/STRAIN_ID
 
 	useEffect (() => {
 		console.log("running axios to get strains")
 		axios.get('http://strainapi.evanbusse.com/AJg5spQ/strains/search/all').then((response) => {
 			setStrainCollection(response.data);
-			console.log('hi!')
+			console.log(response.data)
 		})
 		axios.get('/budwiser/').then((response) => {
 			setStrainFavorites(response.data);
@@ -39,15 +40,7 @@ function Strains() {
 		</div>
 
 	);
-
 }
-
-
-
-
-
-
-
 
 
 export default Strains;

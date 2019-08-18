@@ -1,11 +1,11 @@
 import React from 'react';
+import StrainList from './StrainList'
 
 const Budbook = props => (
 	<>
 		<p>THIS IS GONNA BE A BUDBOOK HONKEY</p>
-		<form>
-			
-		</form>
+		
+		<StrainList />
 
 
 	</>

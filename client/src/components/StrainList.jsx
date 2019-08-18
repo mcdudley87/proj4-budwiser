@@ -19,5 +19,4 @@ function StrainList ({strainCollection, handleStrainSelect}) {
 }
 
 
-
 export default StrainList;

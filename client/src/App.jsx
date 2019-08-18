@@ -110,12 +110,12 @@ class App extends React.Component {
         <Router>
           <nav>
             <Link to="/">Home</Link> {' '}
-            <Link to="/Budbook"> Budbooks </Link> {' '}
+            <Link to="/Budbook"> Budbook </Link> {' '}
             <Link to="/Strains"> Strains </Link>
           </nav>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Budbook" component={Budbook} render={Budbook} />
-          <Route exact path="/Strains" component={Strains} render={Strains} />
+          <Route exact path="/Budbook" component={Budbook}  />
+          <Route exact path="/Strains" component={Strains}  />
         </Router>
       </>
     );
