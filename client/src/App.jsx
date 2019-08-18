@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import Login from './Login';
 import Signup from './Signup';
 import Budbook from './components/Budbook';
 import Home from './components/Home';
+import Strains from './components/Strains';
 
 import {
   BrowserRouter as Router,
@@ -109,14 +110,12 @@ class App extends React.Component {
         <Router>
           <nav>
             <Link to="/">Home</Link> {' '}
-            <Link to="/Budbook"> Budbooks </Link>
+            <Link to="/Budbook"> Budbooks </Link> {' '}
+            <Link to="/Strains"> Strains </Link>
           </nav>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Budbook" 
-                component={Budbook}    
-                render={Budbook}  
-          />
-          
+          <Route exact path="/Budbook" component={Budbook} render={Budbook} />
+          <Route exact path="/Strains" component={Strains} render={Strains} />
         </Router>
       </>
     );
