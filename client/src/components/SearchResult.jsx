@@ -85,7 +85,7 @@ class SearchResult extends Component {
 
 		return(
 			<ul>
-				{positive.map(positive => (
+				{positives.map(positive => (
 					<li key={positive}>{positive}</li>
 				))}
 			</ul>
@@ -160,6 +160,7 @@ class SearchResult extends Component {
 					<h4>Flavor Profile: </h4>
 					<p>{this.getFlavor()}</p>
 				</div>
+				<h1> Favorite to Savor It </h1>
 			</div>	
 		);
 	}

@@ -106,9 +106,14 @@ class Result extends Component {
 						<div className="flavors">{this.getFlavors()}</div>
 					</div>
 				</div>
+				<h1> Favorite to Savor It </h1>
 			</div>
 		);
 	}
 }
 
 export default Result;
+
+
+
+//This Component may not be needed for how I'm using this program...

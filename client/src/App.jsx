@@ -6,7 +6,7 @@ import Budbook from './components/Budbook';
 import Home from './components/Home';
 import Strains from './components/Strains';
 import Search from './components/Search';
-import Result from './components/Result';
+// import Result from './components/Result';
 
 import {
   BrowserRouter as Router,

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import Result from './components/Result';
-import SearchResult from './components/SearchResult';
+import Result from './Result';
+import SearchResult from './SearchResult';
 
 class Search extends Component {
 	constructor(props) {
@@ -74,7 +74,7 @@ class Search extends Component {
 	// API call that gets search results
 
 	getSearchResults() {
-		let { search, searchType } = this.statel
+		let { search, searchType } = this.state
 		const APIkey = 'AJg5spQ';
 		let url = `http://strainapi.evanbusse.com/${APIkey}/strains/search/`;
 
@@ -117,7 +117,7 @@ class Search extends Component {
 	addToSearchedList(resultsArr) {
 		let searchedItem = resultsArr[0].name;
 		let searchList = {
-			name: [...this.state.searchList, searchedItem],
+			name: [this.state.searchList, searchedItem],
 			todoList: false
 		};
 
