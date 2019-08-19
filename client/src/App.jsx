@@ -4,6 +4,7 @@ import Login from './Login';
 import Signup from './Signup';
 import Home from './components/Home';
 import Search from './components/Search';
+import Budbook from './components/Budbook';
 
 import {
   BrowserRouter as Router,
@@ -109,11 +110,12 @@ class App extends React.Component {
         <Router>
           <nav>
             <Link to="/">Home</Link> {' '}
-            
+            <Link to="/Budbook">Budbook</Link> {' '}
             <Link to="/Search"> Search </Link>
           </nav>
           <Route exact path="/" component={Home} />
           <Route exact path="/Search" component={Search} />
+          <Route exact path="/Budbook" component={Budbook} />
         </Router>
       </>
     );

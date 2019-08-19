@@ -115,6 +115,7 @@ class Search extends Component {
 	}
 
 	addToSearchedList(resultsArr) {
+		// Ternary operator to return error message if no search result found. 
 		let searchedItem = resultsArr[0].name;
 		let searchList = {
 			name: [this.state.searchList, searchedItem],

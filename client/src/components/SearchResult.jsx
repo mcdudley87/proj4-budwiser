@@ -14,7 +14,7 @@ class SearchResult extends Component {
 			flavor: []
 		};
 
-		this.handleClick = this. handleClick.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 		this.setEffectsState = this.setEffectsState.bind(this);
 		this.getPositive = this.getPositive.bind(this);
 		this.getNegative = this.getNegative.bind(this);
@@ -44,6 +44,10 @@ class SearchResult extends Component {
 			this.setEffectsState
 		);
 	}
+
+	//Write a handle favorite function that saves a strain by name to the DB 
+	//  and populates the list of favorites into the budbook.
+
 
 	setEffectsState() {
 		let { clickedID } = this.state;
@@ -138,7 +142,8 @@ class SearchResult extends Component {
 				data-key={result.id}
 			>
 				<div className="result-name-type">
-					<h1 className="result-name">{result.name}</h1>
+					<h1 className="result-name">{result.name}</h1> 
+					<button> Favorite to Savor It </button>
 					<div className="result-race">{result.race}</div>
 				</div>
 				<div className="result-effect">
@@ -160,7 +165,6 @@ class SearchResult extends Component {
 					<h4>Flavor Profile: </h4>
 					<p>{this.getFlavor()}</p>
 				</div>
-				<h1> Favorite to Savor It </h1>
 			</div>	
 		);
 	}
