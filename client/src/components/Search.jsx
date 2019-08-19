@@ -116,7 +116,7 @@ class Search extends Component {
 
 	addToSearchedList(resultsArr) {
 		// Ternary operator to return error message if no search result found. 
-		let searchedItem = resultsArr[0].name;
+		let searchedItem = resultsArr[0];
 		let searchList = {
 			name: [this.state.searchList, searchedItem],
 			todoList: false
@@ -151,15 +151,7 @@ class Search extends Component {
 					<h1>
 						Bud Wiser
 					</h1>
-					{search ? (
-						<h4 className="subheader">
-							{wasSearched ? `${search}` : `You got it...`}
-						</h4>
-					) : (
-						<p className="directions-header">
-							Search for a strain by name to view details.
-						</p>	
-					)}	
+				
 				</div> 
 				<form action="#" onSubmit={this.onSubmit}>
 					<input type="text"
@@ -175,6 +167,17 @@ class Search extends Component {
 					</select>
 					<input type="submit" />
 				</form>		
+				
+				{/* Nifty search widget thing: */}
+				{search ? (
+						<h4 className="subheader">
+							{wasSearched ? `Results: ` : `Searching... `}
+						</h4>
+					) : (
+						<p className="directions-header">
+							Search for a strain by name to view details.
+						</p>	
+					)}	
 
 				<div className="results-display">
 					{loading ? (

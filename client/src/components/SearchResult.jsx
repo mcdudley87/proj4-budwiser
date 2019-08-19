@@ -147,7 +147,7 @@ class SearchResult extends Component {
 					<div className="result-race">{result.race}</div>
 				</div>
 				<div className="result-effect">
-					<p>{result.desc}</p>
+					<div>{result.desc}</div>
 				</div>
 				<div className="result-effect">
 					<h4>Positive Effects: </h4>
@@ -159,11 +159,11 @@ class SearchResult extends Component {
 				</div>
 				<div>
 					<h4>Medicinal: </h4>
-					<p>{this.getMedical()}</p>
+					<div>{this.getMedical()}</div>
 				</div>
 				<div>
 					<h4>Flavor Profile: </h4>
-					<p>{this.getFlavor()}</p>
+					<div>{this.getFlavor()}</div>
 				</div>
 			</div>	
 		);

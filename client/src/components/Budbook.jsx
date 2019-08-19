@@ -2,9 +2,16 @@ import React from 'react';
 
 function Budbook() {
 	return (
-		<div>
-			This is a budbook!
-		</div>
+		<>
+			<div>
+				Create New Budbook
+			</div>
+			<form action="submit">
+				<input type="string" name="title" placeholder="title" /> {' '}
+				<input type="string" name="description" placeholder="description"/> {' '}
+				<input type="text" name="notes" placeholder="notes" />
+			</form>
+		</>
 	)
 }
 

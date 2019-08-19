@@ -9,7 +9,7 @@ const Strain = require('../models/strain');
 // GET all budbooks associated with user
 // get /budbooks
 router.get('/budbooks', (req, res) => {
-	User.findById(req.user.id).populate('budbooks').exec( (err, user) => {
+	User.findById(req.user._id).populate('budbooks').exec( (err, user) => {
 		if (err) res.json(err)
 		res.json(user)
 	})
@@ -26,10 +26,12 @@ router.get('/budbooks/:id', (req, res) => {
 // POST a budbook
 // POST /budbooks
 router.post('/budbooks', (req, res) => {
-	User.findById(req.user.id, (err, user) => {
+	console.log("This is supposed to be the user:", req.user);
+	User.findById(req.user._id, (err, user) => {
 		let newBudbook = new Budbook({
 			title: req.body.title,
 			desc: req.body.desc,
+			notes: req.body.notes,
 		})
 		newBudbook.save( (err, budbook) => {
 			user.budbooks.push(budbook)
@@ -56,7 +58,7 @@ router.put('/budbooks', (req, res) => {
 // DELETE a budbook
 router.delete('/budbooks/:bid', (req, res) => {
 	User.findById(req.user._id, (err, user) => {
-		user.budbooks.pull(req.user.bid)
+		user.budbooks.pull(req.params.bid)
 		user.save(err => {
 			if (err) res.json(err)
 			Budbook.findByIdAndDelete(req.params.bid, (err) => {
@@ -83,12 +85,6 @@ router.post('/budbooks/:id/strains', (req, res) => {
 		})
 	})
 })
-
-//====THESE ARE THE COMMENT ROUTES====//
-
-// router.post('/budbooks/:id/strains/comments', (req, res) => {
-
-// })
 
 
 
