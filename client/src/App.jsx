@@ -5,6 +5,8 @@ import Signup from './Signup';
 import Budbook from './components/Budbook';
 import Home from './components/Home';
 import Strains from './components/Strains';
+import Search from './components/Search';
+import Result from './components/Result';
 
 import {
   BrowserRouter as Router,
@@ -111,11 +113,13 @@ class App extends React.Component {
           <nav>
             <Link to="/">Home</Link> {' '}
             <Link to="/Budbook"> Budbook </Link> {' '}
-            <Link to="/Strains"> Strains </Link>
+            <Link to="/Strains"> Strains </Link> {' '}
+            <Link to="/Search"> Search </Link>
           </nav>
           <Route exact path="/" component={Home} />
           <Route exact path="/Budbook" component={Budbook}  />
           <Route exact path="/Strains" component={Strains}  />
+          <Route exact path="/Search" component={Search} />
         </Router>
       </>
     );
