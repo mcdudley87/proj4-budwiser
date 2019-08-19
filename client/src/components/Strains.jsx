@@ -44,3 +44,14 @@ function Strains() {
 
 
 export default Strains;
+
+/*
+
+Need to load content into state either with functional or class based component and map through.
+Look at reference projects for a path forward. 
+
+
+
+
+
+*/
