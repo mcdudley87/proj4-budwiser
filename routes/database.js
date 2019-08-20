@@ -3,7 +3,6 @@ const router = express.Router();
 const User = require('../models/user');
 const Budbook = require('../models/budbook');
 const Strain = require('../models/strain');
-// const Comment = require('../models/comment');
 
 //====THESE ARE THE BUDBOOK ROUTES===//
 // GET all budbooks associated with user

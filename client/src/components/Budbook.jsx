@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import BudList from './BudList';
-import BudDetail from './BudDetail';
 import BudForm from './BudForm';
 
 
@@ -40,7 +39,7 @@ function Budbook(props) {
       <BudList token={props.token} setNewBudbook={setNewBudbook} 
                                     budbooks={budbooks}
                                     handleBudbookChange={setBudbookId} />
-      <BudDetail budbooks={budbooks} />
+      {/* <BudDetail budbooks={budbooks} /> */}
       <BudForm token={props.token} setNewBudbook={setNewBudbook} />
     </div>
   );
