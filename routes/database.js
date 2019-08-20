@@ -9,6 +9,8 @@ const Strain = require('../models/strain');
 // GET all budbooks associated with user
 // get /budbooks
 router.get('/budbooks', (req, res) => {
+	console.log("We are hitting the GET ALL BUDBOOKS route")
+	console.log("This is the USER:", req.user)
 	User.findById(req.user._id).populate('budbooks').exec( (err, user) => {
 		if (err) res.json(err)
 		res.json(user)
@@ -18,8 +20,11 @@ router.get('/budbooks', (req, res) => {
 // GET one budbook associated with user
 router.get('/budbooks/:id', (req, res) => {
 	Budbook.findById(req.params.id).populate('strains').exec( (err, budbook) => {
-		if (err) res.json(err)
-		res.json(budbook)
+		if (err) {
+			res.json(err)
+		} else {
+			res.json(budbook)
+		}
 	})
 })
 
@@ -89,8 +94,8 @@ router.post('/budbooks/:id/strains', (req, res) => {
 
 
 
-router.get('/', (req, res) => {
-	res.json({type: 'success', message: 'you accessed the protected api routes.'});
-});
+// router.get('/', (req, res) => {
+// 	res.json({type: 'success', message: 'you accessed the protected api routes.'});
+// });
 
 module.exports = router;

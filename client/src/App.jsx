@@ -115,7 +115,7 @@ class App extends React.Component {
           </nav>
           <Route exact path="/" component={Home} />
           <Route exact path="/Search" component={Search} />
-          <Route exact path="/Budbook" component={Budbook} />
+          <Route exact path="/Budbook" render={() => <Budbook token={this.state.token}/>} />
         </Router>
       </>
     );

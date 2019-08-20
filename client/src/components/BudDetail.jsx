@@ -1,15 +1,16 @@
 import React from 'react';
 
 
-function BudDetail({budbook}) {
+function BudDetail({budbooks}) {
 	let content;
-	if (Object.keys(budbook).length > 0) {
+	if (budbooks.length > 0) {
 		// there are budbooks
+		// map budbooks to display
 		content = (
 			<>
-				<h1>{budbook.title}</h1>
-				<h3>Description: {budbook.desc}</h3>
-				<p>Notes: {budbook.notes}</p>
+				<h1>{budbooks.title}</h1>
+				<h3>Description: {budbooks.desc}</h3>
+				<p>Notes: {budbooks.notes}</p>
 				<button>DELETE budbook ADD FUNCTIONALITY</button>
 			</>
 		)
