@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './result.css';
 
 class SearchResult extends Component {
 	constructor(props) {

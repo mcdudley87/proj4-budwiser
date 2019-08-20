@@ -21,9 +21,9 @@ function Budbook(props) {
     console.log('running the GET ALL BUDBOOKS effect')
     axios.get('/api/budbooks', config).then((response) => {
       console.log("Dis da data:", response.data);
-      setBudbooks(response.data);
+      setBudbooks(response.data.budbooks);
     })
-  }, [])
+  }, [newBudbook])
 
   useEffect( () => {
     console.log('running the GET ONE BUDBOOK effect')
@@ -37,7 +37,7 @@ function Budbook(props) {
 
   return (
     <div className="Budbook">
-      <BudList budbooks={budbooks} handlebudbookChange={setBudbookId} />
+      <BudList budbooks={budbooks} handleBudbookChange={setBudbookId} />
       <BudDetail budbooks={budbooks} />
       <BudForm token={props.token} setNewBudbook={setNewBudbook} />
     </div>

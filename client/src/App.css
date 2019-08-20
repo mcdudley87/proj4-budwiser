@@ -31,3 +31,163 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  background-color: #383838;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.title-container h1 {
+  text-align: center;
+  color: white;
+  font-size: 95px;
+  padding: 50px 0px 0px 0px;
+}
+
+.title-container h1 span {
+  color: #31e981;
+}
+
+.sub-heading {
+  text-align: center;
+  margin-bottom: 50px;
+  color: gray;
+  font-size: 22px;
+}
+
+.sub-heading-h4 {
+  font-size: 32px;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(319px, 1fr));
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  padding: 10px;
+  max-width: 80%;
+  margin: auto;
+}
+
+.searchAllBtnContainer {
+  width: 40%;
+  margin: auto;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 50px;
+  justify-content: flex-start;
+  height: 100px;
+  align-items: center;
+}
+
+form {
+  width: 40%;
+  margin: auto;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input[type='text'],
+form input[type='submit'],
+select {
+  height: 50px;
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: 1px solid #dcd5d5;
+  background-color: white;
+  color: #383838;
+  min-width: 400px;
+}
+
+.searchAllBtn {
+  width: 150px;
+  padding: 10px;
+  background-color: #0b582d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: all 0.2s ease;
+  height: 50px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+
+form input[type='submit'] {
+  width: 150px;
+  padding: 10px;
+  background-color: #0b582d;
+  color: white;
+  font-weight: bold;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+input[type='submit']:hover,
+.searchAllBtn:hover {
+  border-radius: 25px;
+  background-color: transparent;
+  border: 2px solid #0b582d;
+}
+
+.loader {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.loader .loader-progress {
+  background-color: #0b582d;
+  height: 100%;
+  width: 2%;
+  animation: loading;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.go-to-top i {
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.go-to-top i:hover {
+  color: #0b582d;
+}
+
+@keyframes loading {
+  from {
+    width: 1%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  form {
+    width: 80%;
+  }
+
+  form input[type='text'],
+  form input[type='submit'],
+  select {
+    min-width: 300px;
+  }
+}

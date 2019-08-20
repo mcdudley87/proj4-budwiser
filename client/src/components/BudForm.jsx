@@ -29,12 +29,12 @@ function BudbooksForm({setNewBudbook, token}) {
 
   return (
     <form onSubmit={submitBudbook}>
-      <p>Title: </p>
+      {/* <p>Title: </p> */}
       <input type="text" name='title' value={title} onChange={e => setTitle(e.target.value)} /><br />
-      <p>Description: </p>
+      {/* <p>Description: </p> */}
       <input type="text" name='desc' value={desc} onChange={e => setDesc(e.target.value)} /><br /> 
-      <p>Notes: </p>
-      <input type="textarea" name='notes' value={notes} onChange={e => setNotes(e.target.value)} /><br />
+      {/* <p>Notes: </p> */}
+      <input type="text" name='notes' value={notes} onChange={e => setNotes(e.target.value)} /><br />
       <input type='submit' value='Add Budbook' />
     </form>
   );
