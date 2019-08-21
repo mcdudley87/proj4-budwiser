@@ -144,7 +144,6 @@ class SearchResult extends Component {
 			>
 				<div className="result-name-type">
 					<h1 className="result-name">{result.name}</h1> 
-					<button> Favorite to Savor It </button>
 					<div className="result-race">{result.race}</div>
 				</div>
 				<div className="result-effect">

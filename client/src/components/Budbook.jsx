@@ -36,10 +36,15 @@ function Budbook(props) {
 
   return (
     <div className="Budbook">
+      <div className="titlecard">
+        <h1>
+          <div className="title-bud">Bud,</div>
+          <div className="title-wiser">Wiser.</div>
+        </h1>
+    </div> 
       <BudList token={props.token} setNewBudbook={setNewBudbook} 
                                     budbooks={budbooks}
                                     handleBudbookChange={setBudbookId} />
-      {/* <BudDetail budbooks={budbooks} /> */}
       <BudForm token={props.token} setNewBudbook={setNewBudbook} />
     </div>
   );

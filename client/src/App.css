@@ -1,11 +1,8 @@
 .App {
+  background-color: #383838;
+  min-height: 100vh;
+  box-sizing: border-box;
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
 }
 
 .App-header {
@@ -23,41 +20,30 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.App {
-  background-color: #383838;
-  min-height: 100vh;
-  box-sizing: border-box;
-}
-
-.title-container h1 {
+.titlecard{
   text-align: center;
-  color: white;
-  font-size: 95px;
-  padding: 50px 0px 0px 0px;
+  font-size: 25px;
 }
 
-.title-container h1 span {
-  color: #31e981;
+.title-bud {
+  color: #085D05;
 }
 
-.sub-heading {
+.title-wiser {
+  color: #121BC0;
+}
+
+.directions-subheader {
   text-align: center;
   margin-bottom: 50px;
-  color: gray;
+  color: #121BC0;
   font-size: 22px;
 }
 
-.sub-heading-h4 {
-  font-size: 32px;
+.directions-header {
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 50px;
 }
 
 .result-grid {
@@ -70,18 +56,57 @@
   margin: auto;
 }
 
-.searchAllBtnContainer {
+.deleteBtn {
+  position: absolute;
+  border-radius: 50px;
+}
+
+.budbook {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: #121BC0;
+  box-shadow: 5px 1px 19px #00000030;
+  color: white;
   width: 40%;
   margin: auto;
   height: 200px;
+}
+
+.budbook-inner{
+  font-size: 10px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+}
+
+/* .budbook.active {
+  position: fixed;
+  background-color: #085D05;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.budbook:hover {
+  background-color: #085D05;
+  cursor: pointer;
+} */
+
+nav {
+  width: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-bottom: 50px;
-  justify-content: flex-start;
-  height: 100px;
-  align-items: center;
-}
+} 
 
 form {
   width: 40%;
@@ -108,23 +133,11 @@ select {
   min-width: 400px;
 }
 
-.searchAllBtn {
-  width: 150px;
-  padding: 10px;
-  background-color: #0b582d;
-  color: white;
-  font-weight: bold;
-  border: none;
-  transition: all 0.2s ease;
-  height: 50px;
-  box-sizing: border-box;
-  font-size: 20px;
-}
 
 form input[type='submit'] {
   width: 150px;
   padding: 10px;
-  background-color: #0b582d;
+  background-color: #085D05;
   color: white;
   font-weight: bold;
   border: none;
@@ -135,7 +148,7 @@ input[type='submit']:hover,
 .searchAllBtn:hover {
   border-radius: 25px;
   background-color: transparent;
-  border: 2px solid #0b582d;
+  border: 2px solid #121BC0;
 }
 
 .loader {
@@ -146,7 +159,7 @@ input[type='submit']:hover,
 }
 
 .loader .loader-progress {
-  background-color: #0b582d;
+  background-color: #121BC0;
   height: 100%;
   width: 2%;
   animation: loading;
@@ -154,22 +167,6 @@ input[type='submit']:hover,
   animation-duration: 2s;
 }
 
-.go-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  text-decoration: none;
-  color: white;
-}
-
-.go-to-top i {
-  font-size: 45px;
-  cursor: pointer;
-}
-
-.go-to-top i:hover {
-  color: #0b582d;
-}
 
 @keyframes loading {
   from {

@@ -8,18 +8,18 @@ function BudList({budbooks, handleBudbookChange, setNewBudbook, token}) {
     content = budbooks.map((budbook, _id) => {
       return <div onClick={() => handleBudbookChange(budbook._id)} key={_id}>
         <div className="budbook">
-          <h4>Strain: {budbook.title} </h4>  
-          <h4>Description:</h4> 
-            <div className="desc-container"> {budbook.desc} </div>  
-          <h4>Notes:</h4> 
-            <div className="notes-container"> {budbook.notes} </div>  
-          <button onClick={deleteBudbook} value={budbook._id} className="roundedBtn" >Delete</button>
+          <div className="budbook-inner">
+            Strain: {budbook.title} <br />      
+            Description: {budbook.desc} <br />       
+            Notes: {budbook.notes} <br />      
+          </div>
+          <button onClick={deleteBudbook} value={budbook._id} className="deleteBtn">Delete</button>
         </div>
       </div>
     })
   } else {
     // there is not data, show a placeholder
-    content = <p>No budbooks found!</p>
+    content = <p>No Budnotes Found.</p>
   }
 
 function deleteBudbook(e) {
@@ -37,7 +37,7 @@ function deleteBudbook(e) {
   }
 
   return (
-    <div className="Budbook">
+    <div className="budbook">
       {content}
     </div>
   );

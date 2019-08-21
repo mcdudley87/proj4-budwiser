@@ -86,9 +86,9 @@ class App extends React.Component {
     if (user) {
       contents = (
         <>
-        <p>Hello, {user.name}</p>
-        <button>
-          <p onClick={this.logout}>Logout</p>
+        <div>Logged in as {user.name} </div>
+        <button onClick={this.logout}>
+          Logout
         </button>
         </>
       );

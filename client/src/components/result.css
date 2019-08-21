@@ -5,7 +5,7 @@
   align-items: flex-start;
   padding: 10px;
   border-radius: 3px;
-  background-color: #6f6c6c6b;
+  background-color: #121BC0;
   box-shadow: 5px 1px 19px #00000030;
   color: white;
 }
@@ -16,7 +16,7 @@
 
 .result.active {
   position: fixed;
-  background-color: #0b582d;
+  background-color: #085D05;
   top: 0;
   width: 80%;
   height: 100%;
@@ -27,7 +27,7 @@
 }
 
 .result:hover {
-  background-color: #0b582d;
+  background-color: #085D05;
   cursor: pointer;
 }
 
@@ -35,9 +35,17 @@ h1 {
   margin: 0;
 }
 
+ul {
+  font-size: 12px;
+}
+
+h4 {
+  font-size: 14px;
+}
 .result-effect {
   height: 0px;
   overflow: hidden;
+  font-size: 14px;
 }
 .result-name-type {
   flex: 1;

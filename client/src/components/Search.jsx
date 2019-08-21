@@ -147,10 +147,10 @@ class Search extends Component {
 
 		return (
 			<div className="Search">
-				<div id="top"/>
 				<div className="titlecard">
 					<h1>
-						Bud Wiser
+						<div className="title-bud">Bud,</div>
+						<div className="title-wiser">Wiser.</div>
 					</h1>
 				
 				</div> 
@@ -171,7 +171,7 @@ class Search extends Component {
 				
 				{/* Nifty search widget thing: */}
 				{search ? (
-						<h4 className="subheader">
+						<h4 className="directions-subheader">
 							{wasSearched ? `Results: ` : `Searching... `}
 						</h4>
 					) : (
@@ -195,9 +195,6 @@ class Search extends Component {
 					)
 				)}	
 				</div>
-				<a href="#top" className="to-top">
-					<i className="fas fa-arrow-up" />
-				</a>
 			</div>
 		);
 	}

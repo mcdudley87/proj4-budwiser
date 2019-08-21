@@ -97,6 +97,7 @@ class Result extends Component {
 					</div>
 					<div>
 						<h4>Medicinal: </h4>
+						{this.getMedical()}
 					</div>
 				</div>
 
@@ -106,7 +107,6 @@ class Result extends Component {
 						<div className="flavors">{this.getFlavors()}</div>
 					</div>
 				</div>
-				<h1> Favorite to Savor It </h1>
 			</div>
 		);
 	}
