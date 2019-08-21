@@ -12,8 +12,8 @@ function BudList({budbooks, handleBudbookChange, setNewBudbook, token}) {
             Strain: {budbook.title} <br />      
             Description: {budbook.desc} <br />       
             Notes: {budbook.notes} <br />      
-          </div>
           <button onClick={deleteBudbook} value={budbook._id} className="deleteBtn">Delete</button>
+          </div>
         </div>
       </div>
     })

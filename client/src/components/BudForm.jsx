@@ -30,11 +30,11 @@ function BudbooksForm({setNewBudbook, token}) {
   return (
     <form onSubmit={submitBudbook}>
       <div className="input-form">
-        <p>Strain: </p>
+        <h2>Strain: </h2>
         <input type="text" name='title' value={title} onChange={e => setTitle(e.target.value)} /><br />
-        <p>Description: </p>
+        <h2>Description: </h2>
         <input type="text" name='desc' value={desc} onChange={e => setDesc(e.target.value)} /><br /> 
-        <p>Notes: </p>
+        <h2>Notes: </h2>
         <input type="text" name='notes' value={notes} onChange={e => setNotes(e.target.value)} /><br />
         <input type='submit' value='Add Budnote' />
       </div>

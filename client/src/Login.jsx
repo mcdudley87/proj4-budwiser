@@ -49,7 +49,7 @@ class Login extends React.Component {
 		return(
 			<div className="Login">
 				<h3>Log into your account:</h3>
-				<form onSubmit={this.handleSubmit}>
+				<form onSubmit={this.handleSubmit} >
 					<input onChange={this.handleEmailChange} 
 										value={this.state.email}
 										type="email"

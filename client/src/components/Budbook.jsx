@@ -41,7 +41,7 @@ function Budbook(props) {
           <div className="title-bud">Bud,</div>
           <div className="title-wiser">Wiser.</div>
         </h1>
-    </div> 
+      </div> 
       <BudList token={props.token} setNewBudbook={setNewBudbook} 
                                     budbooks={budbooks}
                                     handleBudbookChange={setBudbookId} />
