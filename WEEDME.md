@@ -20,4 +20,7 @@
 *Node.js
 *Fits of screaming 
 
+#### API Used
+The Strain - http://strains.evanbusse.com/
+
 
