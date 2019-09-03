@@ -1,16 +1,10 @@
-## This is ALSO a WEEDME
+## This is ALSO a README.
 
 #### User Stories:
-* I Like weed. 
-* I REALLY like weed. 
+* "I want to try more or find new strains of cannabis, but am uncertain how to conduct an informed search. I would like a glossary of strains which lists these traits." 
 
-#### Developer Notes:
-* Sounds good, let's make a weed app. 
-
-
-#### The Developer Makes a Weed App. 
-*This was hard
-*I didn't get to enjoy the subject matter as much as I would have liked during project week because of it. 
+#### Developer Notes. 
+* This project really challenged me to grow in my abilities to manipulate API information. 
 
 #### Technologies Used
 *The amazing power of sweet, sweet ganja. 
