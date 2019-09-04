@@ -33,6 +33,26 @@
   color: #121BC0;
 }
 
+.Login {
+  width: 40%;
+  margin: auto;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+
+.Signup {
+  width: 40%;
+  margin: auto;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .directions-subheader {
   text-align: center;
   margin-bottom: 50px;

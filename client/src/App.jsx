@@ -90,12 +90,22 @@ class App extends React.Component {
           <button onClick={this.logout}>
             Logout
           </button>
+            <Router>
+              <nav>
+                <Link to="/">Home</Link> {' '}
+                <Link to="/Budbook">Budbook</Link> {' '}
+                <Link to="/Search"> Search </Link>
+              </nav>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/Search" component={Search} />
+              <Route exact path="/Budbook" render={() => <Budbook token={this.state.token}/>} />
+            </Router>
         </>
       );
     } else {
       contents = (
         <>
-          <h2>Please register or login.</h2>
+          <h2 className="Login">Please register or login.</h2>
           <Login liftToken={this.liftToken} />
           <Signup liftToken={this.liftToken} />
         </>
@@ -107,7 +117,7 @@ class App extends React.Component {
           {contents}
         </div>
 
-        <Router>
+        {/* <Router>
           <nav>
             <Link to="/">Home</Link> {' '}
             <Link to="/Budbook">Budbook</Link> {' '}
@@ -116,7 +126,7 @@ class App extends React.Component {
           <Route exact path="/" component={Home} />
           <Route exact path="/Search" component={Search} />
           <Route exact path="/Budbook" render={() => <Budbook token={this.state.token}/>} />
-        </Router>
+        </Router> */}
       </>
     );
   }
