@@ -149,8 +149,9 @@ class Search extends Component {
 			<div className="Search">
 				<div className="titlecard">
 					<h1>
-						<div className="title-bud">Bud,</div>
-						<div className="title-wiser">Wiser.</div>
+						<div className="title-bud">Bud</div>
+						<div className="title-wiser">Books</div>
+						<div className="title-subtitle">Bud, wiser.</div>
 					</h1>
 				
 				</div> 

@@ -33,6 +33,11 @@
   color: #121BC0;
 }
 
+.title-subtitle {
+  color: black;
+  font-size: 14px;
+}
+
 .Login {
   width: 40%;
   margin: auto;
