@@ -55,7 +55,6 @@ class SearchResult extends Component {
 	setEffectsState() {
 		let { clickedID } = this.state;
 		// const APIkey = 'AJg5spQ';
-		let url = `http://strainapi.evanbusse.com/${process.env.API_KEY}/strains/search/`;
 
 		let url = `http://strainapi.evanbusse.com/${process.env.API_KEY}/strains/data/effects/${clickedID}`;
 		let flavorURL = `http://strainapi.evanbusse.com/${process.env.API_KEY}/strains/data/flavors/${clickedID}`;
