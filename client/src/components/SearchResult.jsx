@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './result.css';
+import dotenv from 'dotenv';
+dotenv.config();
 
 class SearchResult extends Component {
 	constructor(props) {
@@ -52,10 +54,11 @@ class SearchResult extends Component {
 
 	setEffectsState() {
 		let { clickedID } = this.state;
-		const APIkey = 'AJg5spQ';
+		// const APIkey = 'AJg5spQ';
+		let url = `http://strainapi.evanbusse.com/${process.env.API_KEY}/strains/search/`;
 
-		let url = `http://strainapi.evanbusse.com/${APIkey}/strains/data/effects/${clickedID}`;
-		let flavorURL = `http://strainapi.evanbusse.com/${APIkey}/strains/data/flavors/${clickedID}`;
+		let url = `http://strainapi.evanbusse.com/$${process.env.API_KEY}/strains/data/effects/${clickedID}`;
+		let flavorURL = `http://strainapi.evanbusse.com/$${process.env.API_KEY}/strains/data/flavors/${clickedID}`;
 		
 		this.setState({ loading: true });
 
