@@ -38,7 +38,7 @@ class Search extends Component {
 	getResults() {
 		let { search, searchType } = this.state;
 		// const APIkey = 'AJg5spQ';
-		let url = `https://strainapi.evanbusse.com/${process.env.API_KEY}/strains/search/`;
+		let url = `http://strainapi.evanbusse.com/${process.env.API_KEY}/strains/search/`;
 
 		this.setState({ loading: true });
 
@@ -79,7 +79,7 @@ class Search extends Component {
 	getSearchResults() {
 		let { search, searchType } = this.state
 		// const APIkey = 'AJg5spQ';
-		let url = `https://strainapi.evanbusse.com/${process.env.API_KEY}/strains/search/`;
+		let url = `http://strainapi.evanbusse.com/${process.env.API_KEY}/strains/search/`;
 
 		this.setState({ loading: true });
 
