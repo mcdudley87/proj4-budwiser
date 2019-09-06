@@ -3,8 +3,6 @@ import axios from 'axios';
 import Result from './Result';
 import SearchResult from './SearchResult';
 import '../App.css';
-import dotenv from 'dotenv';
-dotenv.config();
 
 class Search extends Component {
 	constructor(props) {
@@ -37,8 +35,8 @@ class Search extends Component {
 	// API Call to get search results
 	getResults() {
 		let { search, searchType } = this.state;
-		// const APIkey = 'AJg5spQ';
-		let url = `http://strainapi.evanbusse.com/${process.env.API_KEY}/strains/search/`;
+		const APIkey = 'AJg5spQ';
+		let url = `http://strainapi.evanbusse.com/${APIkey}/strains/search/`;
 
 		this.setState({ loading: true });
 
@@ -78,8 +76,8 @@ class Search extends Component {
 
 	getSearchResults() {
 		let { search, searchType } = this.state
-		// const APIkey = 'AJg5spQ';
-		let url = `http://strainapi.evanbusse.com/${process.env.API_KEY}/strains/search/`;
+		const APIkey = 'AJg5spQ';
+		let url = `http://strainapi.evanbusse.com/${APIkey}/strains/search/`;
 
 		this.setState({ loading: true });
 

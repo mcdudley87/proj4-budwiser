@@ -48,6 +48,13 @@
   align-items: center;
 } 
 
+.login-logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .Signup {
   width: 40%;
   margin: auto;

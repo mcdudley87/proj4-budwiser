@@ -5,6 +5,8 @@ import Signup from './Signup';
 import Home from './components/Home';
 import Search from './components/Search';
 import Budbook from './components/Budbook';
+import './App.css';
+
 
 import {
   BrowserRouter as Router,
@@ -105,6 +107,11 @@ class App extends React.Component {
     } else {
       contents = (
         <>
+          <h1 className="login-logo">
+						<div className="title-bud">Bud</div>
+						<div className="title-wiser">Books</div>
+						<div className="title-subtitle">Bud, wiser.</div>
+					</h1>
           <h2 className="Login">Please register or login.</h2>
           <Login liftToken={this.liftToken} />
           <Signup liftToken={this.liftToken} />

@@ -24,8 +24,7 @@ const signupLimiter = new RateLimit({
 	message: "Maximum accounts created, please try again later. Glad you like our site so much tho..."
 });
 
-mongoose.connect(process.env.MONGODB_URI, {useNewUrlParser: true});
-
+mongoose.connect('mongodb://localhost/budwiser', {useNewUrlParser: true});
 const db = mongoose.connection;
 db.once('open', () => {
 	console.log(`Connected to Mongo on ${db.host}:${db.port}`);
@@ -36,13 +35,12 @@ db.on('error', (err) => {
 
 // app.use('/auth/login', loginLimiter); 
 // app.use('/auth.signup', signupLimiter);
-app.use(express.static(__dirname + '/client/build'));
+
 app.use('/auth', require('./routes/auth'));
 app.use('/api', expressJWT({secret: process.env.JWT_SECRET}), require('./routes/database'));
 // //       ^^where it's from       ^^where it goes
 
 app.listen(process.env.PORT, () => {
 	console.log(` 🎧"You're listening to K-Billy Super Sounds of the 70's on port ${process.env.PORT}..."🎧 `);
-});
+})
 
-app.get('*', function(req, res) {res.sendFile(__dirname + '/client/build/index.html');});
